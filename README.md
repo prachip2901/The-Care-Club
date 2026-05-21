@@ -1,6 +1,4 @@
-<img width="1562" height="912" alt="donation_page" src="https://github.com/user-attachments/assets/e3fe5aab-6259-4fa4-a292-b099932e044e" /><img width="1562" height="912" alt="donation_page" src="https://github.com/user-attachments/assets/68f88ee0-b2f9-4ae4-b458-a3cb6a66eae6" />
-<img width="1562" height="912" alt="donation_page" src="https://github.com/user-attachments/assets/469be9a3-4806-4a2f-ae40-cb0c9ab1cdb9" />
-<img width="1562" height="912" alt="donation_page" src="https://github.com/user-attachments/assets/14e35d81-c410-4060-b7e0-237933eeeb2d" />
+
 # 🌿 The Care Club
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
