@@ -86,7 +86,7 @@ The system ensures transparent donation tracking, membership management, and adm
 ## 📸 Screenshots
 
 ### 🏠 Home Page
-![<img width="1918" height="898" alt="home_page" src="https://github.com/user-attachments/assets/7a8ae1d6-33fe-4664-b178-0cf45de455aa" />](screenshots/home.png)
+<img width="1918" height="898" alt="home_page" src="https://github.com/user-attachments/assets/fc10edfa-f9c5-4f27-bdf3-5c3648b9cafb" />
 
 ### 💰 Donation Page
 ![Donation](screenshots/donation.png)
