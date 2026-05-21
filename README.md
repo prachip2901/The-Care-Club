@@ -1,3 +1,6 @@
+<img width="1562" height="912" alt="donation_page" src="https://github.com/user-attachments/assets/e3fe5aab-6259-4fa4-a292-b099932e044e" /><img width="1562" height="912" alt="donation_page" src="https://github.com/user-attachments/assets/68f88ee0-b2f9-4ae4-b458-a3cb6a66eae6" />
+<img width="1562" height="912" alt="donation_page" src="https://github.com/user-attachments/assets/469be9a3-4806-4a2f-ae40-cb0c9ab1cdb9" />
+<img width="1562" height="912" alt="donation_page" src="https://github.com/user-attachments/assets/14e35d81-c410-4060-b7e0-237933eeeb2d" />
 # 🌿 The Care Club
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
@@ -89,13 +92,13 @@ The system ensures transparent donation tracking, membership management, and adm
 <img width="1918" height="898" alt="home_page" src="https://github.com/user-attachments/assets/fc10edfa-f9c5-4f27-bdf3-5c3648b9cafb" />
 
 ### 💰 Donation Page
-![Donation](screenshots/donation.png)
+<img width="1562" height="912" alt="donation_page" src="https://github.com/user-attachments/assets/7531fe73-c1a8-496b-a929-fa9f610023e9" />
 
 ### 🧑‍💼 Admin Dashboard
-![Admin](screenshots/admin.png)
+<img width="1918" height="912" alt="admin_page" src="https://github.com/user-attachments/assets/cfc943f5-0bad-45f4-8b78-616475f21ad3" />
 
 ### 📩 Membership Page
-![Membership](screenshots/membership.png)
+<img width="1522" height="860" alt="Member_request_page" src="https://github.com/user-attachments/assets/05392e6a-3462-41d7-a764-7d59598b649b" />
 
 ---
 
