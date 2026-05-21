@@ -1,0 +1,214 @@
+.modal {
+  display: flex; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 50px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border-radius: 4px;
+  width: 500px;
+	height: auto;
+}
+
+/* The Close Button */
+.close, .close1 {
+  position: absolute;
+  color: lightgray;
+  top: 30;
+  right: 15px; 
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+	
+}
+
+.close:hover,.close:focus,.close1:hover,.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.support_teams {
+	margin-top: 500px;
+	position: absolute;
+	height: 320px;
+	width: 90%;
+	background: #ffffff;
+	top: -115px;
+	left: 50%;
+	transform: translateX(-50%);
+	overflow: hidden;
+	border-radius: 6px;
+	box-shadow: 0 0 8px 1px rgba(0,0,0,0.5);
+}
+
+.support_teams .top_section,.support_teams .bottom_section{
+	height: 50%;
+	display: flex;
+	border-bottom: 1px solid #bdbdbd;
+	justify-content: center;
+}
+.support_teams .top_section .item-box,.support_teams .bottom_section .item-box{
+	width: 50%;
+	padding: 0 0px;
+}
+
+.support_teams .top_section .item-box.customer_support .img_container {
+	background-position: 0 0;
+}
+
+.support_teams .bottom_section .item-box.enterprise_services .img_container1 {
+	background-position: 0px 0;
+}
+
+.support_teams .bottom_section .item-box.partner_services .img_container {
+	background-position: 0 -9px;
+}
+
+.support_teams .top_section .item-box .img_container{
+	flex-shrink: 0;
+	width: 100px;
+	height: 100px;
+	margin-right: 24px;
+	background: url("img/Capture%206(1).PNG");
+	background-repeat: no-repeat;
+	background-size: auto 100px;
+}
+
+.support_teams .bottom_section .item-box .img_container1{
+	flex-shrink: 0;
+	width: 100px;
+	height: 100px;
+	margin-right: 24px;
+	background: url("img/Capture%206(2).PNG");
+	background-repeat: no-repeat;
+	background-size: auto 100px;
+}
+
+.support_teams .bottom_section .item-box .img_container{
+	flex-shrink: 0;
+	width: 100px;
+	height: 100px;
+	margin-right: 24px;
+	background: url("img/Capture%206(3).PNG");
+	background-repeat: no-repeat;
+	background-size: auto 100px;
+}
+
+.support_teams .top_section .item-box:first-child {
+	border-right: none;
+}
+
+.support_teams .bottom_section .item-box:first-child {
+	border-right: 1px solid #bdbdbd;
+}
+
+.semi_bold_porter_blue{
+	font-weight: 600;
+	color: #2969ff;
+}
+
+.flex-align-center{
+	align-items: center;
+	display: flex;
+}
+ 
+p.content{
+	display: block;
+	width: 500px;
+	margin-bottom: 0px;
+	margin-left: 120px;
+}
+
+h2.section_header {
+	margin-bottom: 20px;
+	width: 300px;
+	margin-left: 120px;
+}
+
+.fnt_16{
+	font-size: 16px !important;
+}
+
+.bold_darker {
+	font-weight: 700;
+	color: #212121;
+}
+
+.section_header {
+	letter-spacing: 0.6px;
+}
+
+.info-text-multi-line {
+	font-size: 14px;
+	line-height: 1.43;
+	text-align: left;
+	color: #818181;
+}
+
+.quote-form-area {
+    background: #eef1f5 none repeat scroll 0 0;
+    padding: 30px 20px;
+}
+
+.quote-form input {
+    margin-bottom: 10px;
+}
+
+.quote-form .width-full input {
+    border: 0 none;
+    padding: 10px;
+    width: 100%;
+}
+
+.quote-form .width-half input {
+    border: 0 none;
+    padding: 10px;
+    width: 47%;
+}
+
+.quote-form textarea {
+    border: 0 none;
+    height: 120px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+
+.quote-form button {
+    background: #5d6b82 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.quote-form button:hover {
+    background: #f39c12;
+    color: #fff;
+}
+
+.quote-form button:focus {
+    border: none; 
+	outline: none; 
+} 

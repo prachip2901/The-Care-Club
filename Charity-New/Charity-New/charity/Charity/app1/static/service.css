@@ -1,0 +1,244 @@
+.faq-container-wrapper {
+    width: auto;
+}
+
+.static_reads_content {
+    background: #ffffff;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 40px 40px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.5);
+    transform: translateY(-80px);
+}
+.faq-container-wrapper {
+    width: 88%;
+    background: #fafafa;
+    padding-top: 60px;
+    padding-bottom: 48px;
+}
+
+.faq-container-wrapper .faq-section {
+    width: 100%;
+}
+.faq-section {
+    width: 720px;
+    margin: auto;
+}
+
+.accordion-wrapper {
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.accordion-wrapper.with-down-border .accordion-section {
+    border-radius: 0px;
+    border: none;
+    border-bottom: solid 1px #e2e2e2;
+}
+.accordion-wrapper .accordion-section {
+    border-radius: 4px;
+    border: solid 1px #e2e2e2;
+    box-sizing: border-box;
+}
+
+.accordion-wrapper.with-down-border .accordion-header {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.accordion-wrapper .accordion-section .accordion-header {
+    cursor: pointer;
+    padding: 21px 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+.group {
+    zoom: 1;
+}
+
+.accordion-wrapper .accordion-section .accordion-header .header_text {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    color: #606060;
+    float: left;
+}
+.faq-section .header_text {
+    margin-left: 0px;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+.accordion-wrapper .accordion-section .accordion-header .header_caret_icon {
+    position: absolute;
+    float: right;
+  	transition: transform 0.5s;
+    background: url(chevron-right-solid.svg) no-repeat ;
+    width: 24px;
+    height: 24px;
+    background-size: auto 17px;
+}
+.faq-section .header_caret_icon {
+    position: absolute;
+    right: 10px;
+}
+.accordion-wrapper.with-down-border .accordion-content {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.accordion-wrapper .accordion-section .accordion-content {
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-wrapper .accordion-section .accordion-content .accordion-content-section:first-child {
+    margin-top: 0px;
+}
+.accordion-wrapper .accordion-section .accordion-content .text_container {
+    color: #212121;
+    line-height: 20px;
+}
+.accordion-wrapper .accordion-section .accordion-content .accordion-content-section {
+    margin-top: 15px;
+}
+.accordion-wrapper.with-down-border .accordion-section {
+    border-radius: 0px;
+    border: none;
+    border-bottom: solid 1px #e2e2e2;
+}
+
+.overlay_mask {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    background-color: #000000;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.modal-p {
+    display: none;
+    position: fixed;
+    z-index: 4;
+    padding-top: 75px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+    background-color: rgba(0,0,0,0.6);
+}
+
+#login_modal .modal-content-p {
+    width: 537px;
+}
+.modal-content-p {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 600px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 6px;
+    outline: 0;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+.auth_container {
+    display: flex;
+    width: 100%;
+}
+
+.left_content_auth_form {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    background: #e9e9e9;
+    padding: 20px 15px 10px 15px;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+
+
+.left_content_auth_form .each_sign_in_benefit {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.left_content_auth_form .each_sign_in_benefit.trip_management .benefit_icon {
+    background-position: 0 0;
+}
+.left_content_auth_form .each_sign_in_benefit .benefit_icon {
+    display: inline-block;
+    width: 26px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+    background: url(https://d3o1t8vp7n8wsg.cloudfront.net/assets/website_revamp/login_assets-50e0c6a….svg) no-repeat;
+}
+
+.left_content_auth_form .each_sign_in_benefit .benefit_description {
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.semi_bold_darker {
+    font-weight: 600;
+    color: #212121;
+}
+
+.accordion-wrapper.with-down-border .accordion-header {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.accordion-wrapper .accordion-section .accordion-header {
+    cursor: pointer;
+    padding: 21px 0px 37px 0px;
+    box-sizing: border-box;
+    position: relative;
+}
+.group {
+    zoom: 1;
+}
+
+.accordion-wrapper.with-down-border .accordion-section {
+    border-radius: 0px;
+    border: none;
+    border-bottom: solid 1px #e2e2e2;
+}
+.accordion-wrapper .accordion-section {
+    border-radius: 4px;
+    border: solid 1px #e2e2e2;
+    box-sizing: border-box;
+}
+
+.group:before, .group:after {
+    content: "";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}

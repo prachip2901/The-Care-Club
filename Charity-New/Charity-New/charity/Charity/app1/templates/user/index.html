@@ -1,0 +1,276 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>HopeBridge</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'asset/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'asset/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'asset/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'asset/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'asset/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'asset/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'asset/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'asset/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'asset/css/style.css' %}" rel="stylesheet">
+  <script src="{% static 'test.js' %}"></script>
+
+</head>
+
+<body class="h-100">
+  
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="index.html">HopeBridge<span>.</span></a></h1>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="{% url 'userindex' %}">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About Us</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">categories</a></li>
+          {% if model1 %}
+          {% else %}
+          <li><a class="nav-link scrollto" href="#contact">member request</a></li>
+          {% endif %}
+          
+          <li><a class="nav-link scrollto" href="{% url 'alldata' %}">donationlist</a></li>
+          {% if request.session.email %}
+          <li><a class="nav-link scrollto" href="{% url 'logout' %}">logout</a></li>
+          {% else %}
+          <li><a href="{% url 'login' %}" class="nav-link">login</a></li>
+          {% endif%}
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+            
+  <section id="hero" class="h-100">
+
+    <div class="container h-100">
+      <div class="row h-100 align-items-center"">
+      <div class=" col-lg-6 py-5 py-lg-0 order-2 order-lg-1" data-aos="fade-right">
+        <h1>Universal Charity Portal</h1>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
+        <img src="{% static 'asset/img/bgg.jpeg' %}" class="img-fluid" alt="">
+      </div>
+    </div>
+    </div>
+
+  </section>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+
+  </section><!-- End Hero -->
+
+
+
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about section-bg h-100">
+      <div class="container h-100">
+
+        <div class="row gy-4 h-100 align-items-center">
+          <div class="col-xl-6">
+            <div class="content d-flex flex-column justify-content-center ps-0 ps-xl-4">
+              <h3 data-aos="fade-in" data-aos-delay="100">Charity Trust</h3>
+              <p data-aos="fade-in">
+                A charitable trust is an irrevocable trust established for charitable purposes and, in some
+                jurisdictions, a more specific term than "charitable organization". A charitable trust enjoys a varying
+                degree of tax benefits in most countries. It also generates good will.
+              </p>
+              <div class="row gy-4 mt-3">
+                <div class="col-md-6 icon-box" data-aos="fade-up">
+                  <i class="bx bx-receipt"></i>
+                  <h4>Social Services</h4>
+                  <!-- <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p> -->
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                  <i class="bx bx-cube-alt"></i>
+                  <h4>Orphanage Services</h4>
+                  <!-- <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p> -->
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bx bx-images"></i>
+                  <h4>Old-Age Homes</h4>
+                  <!-- <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p> -->
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bx bx-shield"></i>
+                  <h4>School Donation</h4>
+                  <!-- <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p> -->
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+          <div class="col-xl-6">
+            <img class="w-100" src="{% static 'img/about.jpeg' %}" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2 data-aos="fade-in">Categories</h2>
+          <p data-aos="fade-in">A charitable trust is an irrevocable trust established for charitable purposes and, in some
+            jurisdictions, a more specific term than "charitable organization". A charitable trust enjoys a varying
+            degree of tax benefits in most countries. It also generates good will.</p>
+        </div>
+
+       
+
+        <div class="row portfolio-container" data-aos="fade-up">
+          {% for i in mod %}
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="{{ i.image.url }}" class="img-fluid" alt="{{ i.name }}">
+
+            <h3 class="fw-bolder my-2">{{ i.name }}</h3>
+            <p class="donate-desc">{{ i.description }}</p>
+            {% if model1.is_verified == True %}
+            <div class="text-center">
+              <a href="{% url 'donationcategory' i.id %}" class="btn btn-primary premium-cta-btn">Donate</a>
+            </div>
+            {% else %}
+            <div class="text-center">
+              <a href="{% url 'login' %}" class="btn btn-primary premium-cta-btn">Donate</a>
+            </div>
+            {% endif %}
+          </div>
+
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+    <!-- ======= Contact Section ======= -->
+    
+      
+   <!-- End Contact Section -->
+    
+    {% if model1 %}
+
+    {% else %}
+    <section id="contact" class="contact section-bg h-100 ">
+    <div class="container h-100" data-aos="fade-up">
+      <div class="row h-75 justify-content-center align-items-center">
+      <div class="col-12 col-md-7">
+       <div class="section-title">
+                <h2>Member Request</h2>
+                <p>For donation be a member</p>
+                <p>You will get a mail after approval from admin and get username & password.</p>
+        </div>
+      
+                <form method="post" class="w-100 row ">
+                  {% csrf_token %}
+                    <div class="form-group mt-3">
+                      <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                      </div>
+                    <div class="form-group mt-3">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                    </div>
+                  <div class="form-group mt-3">
+                    <input type="tel" class="form-control" name="mobile" id="mobile" placeholder="Your Mobile" required>
+                  </div>
+                  <div class="text-center"><button type="submit" class="btn btn-primary" name="submit" value="sign_up">Send Message</button></div>
+                </form>
+                {% if m %}
+            <script>alert("{{m}}")</script>
+            {% endif %}
+              </div>
+      
+      </div>
+             
+             
+            </div>
+          </section>
+    {% endif %}
+  
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+
+      <div class="container">
+
+        <div class="row  justify-content-center">
+          <div class="col-lg-6">
+            <h3>HopeBridge</h3>
+            <p>A charitable trust is an irrevocable trust established for charitable purposes and, in some
+              jurisdictions, a more specific term than "charitable organization". A charitable trust enjoys a varying
+              degree of tax benefits in most countries.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+            
+
+
+
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'asset/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'asset/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'asset/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'asset/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'asset/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'asset/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'asset/js/main.js' %}"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  </script>
+
+</body>
+
+</html>

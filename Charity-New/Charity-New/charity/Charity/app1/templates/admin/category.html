@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block title %}Category{% endblock %}
+
+{% block content %}
+
+<section class="content-header dashboard-page">
+  <div class="container-fluid">
+    <p class="dashboard-eyebrow">Admin Console</p>
+    <h1 class="dashboard-title">Add Donation Type</h1>
+    <p class="dashboard-subtitle">Create, upload, and manage donation categories in one place.</p>
+  </div>
+</section>
+
+<section class="content dashboard-page category-page">
+  <div class="container-fluid">
+
+    <!-- FORM CARD -->
+    <div class="card mb-4 category-form-card">
+      <div class="card-header">
+        <h3 class="card-title">Add New Donation Type</h3>
+      </div>
+
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="card-body compact-form">
+
+          <!-- ROW 1 -->
+          <div class="form-row">
+
+            <!-- Name -->
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" name="name" class="form-control premium-input" placeholder="Enter name">
+            </div>
+
+            <!-- Description -->
+            <div class="form-group">
+              <label>Description</label>
+              <input type="text" name="description" class="form-control premium-input" placeholder="Enter description">
+            </div>
+
+          </div>
+
+          <!-- ROW 2 -->
+          <div class="form-row">
+
+            <!-- Upload -->
+            <div class="form-group file-group">
+              <label>Upload Image</label>
+              <input type="file" name="image" class="form-control premium-file">
+            </div>
+
+          </div>
+
+          <!-- BUTTON BELOW FORM -->
+          <div class="submit-wrapper">
+            <button type="submit" class="btn premium-btn">Submit</button>
+          </div>
+
+        </div>
+
+      </form>
+    </div>
+
+    <!-- TABLE CARD -->
+    <div class="card dashboard-table-card">
+      <div class="card-header">
+        <h3 class="card-title">Donation Categories</h3>
+      </div>
+
+      <div class="card-body">
+        <table class="table premium-table">
+
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {% for i in mod %}
+            <tr>
+              <td>
+                <img src="{{ i.image.url }}" class="table-img">
+              </td>
+              <td>{{ i.name }}</td>
+              <td>{{ i.description }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+
+        </table>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

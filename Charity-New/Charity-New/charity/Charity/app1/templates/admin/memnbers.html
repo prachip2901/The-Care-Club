@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block title %}Approved Members{% endblock %}
+
+{% block content %}
+
+<section class="content-header dashboard-page">
+  <div class="container-fluid">
+    <p class="dashboard-eyebrow">Admin Console</p>
+    <h1 class="dashboard-title">Approved Members</h1>
+    <p class="dashboard-subtitle">Review verified members and manage communication in one place.</p>
+  </div>
+</section>
+
+<section class="content dashboard-page approved-page">
+  <div class="container-fluid">
+
+    <div class="card dashboard-table-card approved-page-card">
+      <div class="card-header">
+        <h3 class="card-title">Approved Members List</h3>
+      </div>
+
+      <div class="card-body p-0">
+        <div class="table-responsive">
+
+        <table class="table premium-table">
+
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Contact</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {% for i in model %}
+            <tr>
+              <td>{{ i.name }}</td>
+              <td>{{ i.email }}</td>
+              <td>{{ i.mobile }}</td>
+
+              <td>
+                <span class="status-badge">Approved</span>
+              </td>
+
+              <td class="action-btns">
+
+                <!-- DELETE -->
+                <form action="{% url 'delete' i.id %}" method="POST">
+                  {% csrf_token %}
+                  <button class="btn delete-btn">Delete</button>
+                </form>
+
+                <!-- MAIL -->
+                <a href="{% url 'sendmail' i.id %}" class="btn mail-btn">
+                  Send Mail
+                </a>
+
+              </td>
+
+            </tr>
+            {% endfor %}
+          </tbody>
+
+        </table>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

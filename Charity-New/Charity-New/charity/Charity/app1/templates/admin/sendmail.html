@@ -1,0 +1,46 @@
+
+{% extends "base.html" %}
+
+{% block title %}Send Mail{% endblock %}
+
+{% block content %}
+
+<section class="content-header dashboard-page">
+  <div class="container-fluid">
+    <p class="dashboard-eyebrow">Admin Console</p>
+    <h1 class="dashboard-title">Send Mail</h1>
+    <p class="dashboard-subtitle">Send a message to the selected member.</p>
+  </div>
+</section>
+
+<section class="content dashboard-page sendmail-page">
+  <div class="container-fluid">
+    <div class="card sendmail-card">
+      <div class="card-header">
+        <h3 class="card-title">Compose Message</h3>
+      </div>
+      <div class="card-body">
+        <form method="post" class="sendmail-form">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              class="form-control premium-input sendmail-textarea"
+              rows="6"
+              placeholder="Write your message here..."
+              required
+            ></textarea>
+          </div>
+          <div class="submit-wrapper">
+            <button type="submit" class="btn premium-btn">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+ 

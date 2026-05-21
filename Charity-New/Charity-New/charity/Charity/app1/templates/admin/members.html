@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Members{% endblock %}
+
+{% block content %}
+
+<section class="content-header dashboard-page">
+  <div class="container-fluid">
+    <p class="dashboard-eyebrow">Admin Console</p>
+    <h1 class="dashboard-title">Membership Requests</h1>
+    <p class="dashboard-subtitle">Review pending member applications and take approval actions.</p>
+  </div>
+</section>
+
+<section class="content dashboard-page members-page">
+  <div class="container-fluid">
+
+    <div class="card dashboard-table-card members-page-card">
+      <div class="card-header">
+        <h3 class="card-title">User Requests</h3>
+      </div>
+
+      <div class="card-body p-0">
+        <div class="table-responsive">
+        <table class="table premium-table">
+
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Contact</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {% for i in model %}
+            <tr>
+              <td>{{ i.name }}</td>
+              <td>{{ i.email }}</td>
+              <td>{{ i.mobile }}</td>
+              <td class="action-btns">
+
+                <a href="{% url 'approvemember' i.id %}" class="btn approve-btn">
+                  Approve
+                </a>
+
+                <a href="{% url 'rejectmember' i.id %}" class="btn reject-btn">
+                  Reject
+                </a>
+
+              </td>
+            </tr>
+            {% empty %}
+            <tr>
+              <td colspan="4" class="text-center py-4">No pending membership requests.</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+
+        </table>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

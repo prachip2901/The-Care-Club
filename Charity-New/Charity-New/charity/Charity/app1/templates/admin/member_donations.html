@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}Member Donations{% endblock %}
+
+{% block content %}
+
+<section class="content-header dashboard-page">
+  <div class="container-fluid">
+    <p class="dashboard-eyebrow">Admin Console</p>
+    <h1 class="dashboard-title">Member Donations</h1>
+    <p class="dashboard-subtitle">View donation activity made by members across all categories.</p>
+  </div>
+</section>
+
+<section class="content dashboard-page member-donations-page">
+  <div class="container-fluid">
+    <div class="card dashboard-table-card">
+      <div class="card-header d-flex align-items-center justify-content-between flex-wrap">
+        <h3 class="card-title mb-0">Donations from Members</h3>
+        <span class="table-count">Total Entries: {{ data|length }}</span>
+      </div>
+
+      <div class="card-body p-0">
+        <div class="table-responsive">
+          <table class="table premium-table">
+            <colgroup>
+              <col style="width: 7%;">
+              <col style="width: 17%;">
+              <col style="width: 28%;">
+              <col style="width: 17%;">
+              <col style="width: 11%;">
+              <col style="width: 20%;">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="col-sr">Sr.No</th>
+                <th class="col-member">Member</th>
+                <th class="col-email">Email</th>
+                <th class="col-category">Category</th>
+                <th class="col-amount">Amount</th>
+                <th class="col-date">Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for i in data %}
+              <tr>
+                <td class="col-sr">{{ forloop.counter }}</td>
+                <td class="col-member">{{ i.user.name }}</td>
+                <td class="col-email">{{ i.user.email }}</td>
+                <td class="col-category">
+                  <span class="badge badge-success">{{ i.category.name }}</span>
+                </td>
+                <td class="amount-cell col-amount">INR {{ i.Amount }}</td>
+                <td class="date-cell col-date">{{ i.created_on|date:"M d, Y, h:i a" }}</td>
+              </tr>
+              {% empty %}
+              <tr>
+                <td colspan="6" class="text-center py-4">No donations found yet.</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

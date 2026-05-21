@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Admin{% endblock %}</title>
+
+  <!-- AdminLTE + CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.3/dist/css/adminlte.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+
+  {% block extra_css %}{% endblock %}
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+
+<div class="wrapper">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="main-sidebar elevation-4">
+
+    <a href="{% url 'dashboard' %}" class="brand-link">
+      <span class="brand-text font-weight-bold">HopeBridge<span class="brand-dot">.</span></span>
+    </a>
+
+    <div class="sidebar">
+      <nav class="mt-4">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview">
+          <li class="nav-section-label">Main Menu</li>
+
+          <li class="nav-item">
+            <a href="{% url 'dashboard' %}" class="nav-link {% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}">
+              <i class="nav-icon fas fa-home"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{% url 'cat' %}" class="nav-link {% if request.resolver_match.url_name == 'cat' %}active{% endif %}">
+              <i class="nav-icon fas fa-tags"></i>
+              <p>Donation Type</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{% url 'member_donations' %}" class="nav-link {% if request.resolver_match.url_name == 'member_donations' %}active{% endif %}">
+              <i class="nav-icon fas fa-hand-holding-heart"></i>
+              <p>Member Donations</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{% url 'allmembers' %}" class="nav-link {% if request.resolver_match.url_name == 'allmembers' %}active{% endif %}">
+              <i class="nav-icon fas fa-users"></i>
+              <p>Members</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{% url 'members' %}" class="nav-link {% if request.resolver_match.url_name == 'members' %}active{% endif %}">
+              <i class="nav-icon fas fa-user-clock"></i>
+              <p>Membership Requests</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{% url 'adminlogout' %}" class="nav-link">
+              <i class="nav-icon fas fa-sign-out-alt"></i>
+              <p>Logout</p>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+    </div>
+
+  </aside>
+
+  <!-- ================= CONTENT ================= -->
+  <div class="content-wrapper">
+
+    {% block content %}
+    {% endblock %}
+
+  </div>
+
+</div>
+
+<!-- Scripts via CDN -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.3/dist/js/adminlte.min.js"></script>
+
+{% block extra_js %}{% endblock %}
+
+</body>
+</html>
